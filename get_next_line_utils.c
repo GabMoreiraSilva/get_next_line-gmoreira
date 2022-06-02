@@ -6,7 +6,7 @@
 /*   By: gmoreira <gmoreira@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 04:13:25 by gmoreira          #+#    #+#             */
-/*   Updated: 2022/06/02 03:25:39 by gmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/02 04:09:40 by gmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,36 +44,6 @@ char	*ft_strjoin(char *s1, char const *s2)
 	str[index] = '\0';
 	return (str);
 }
-
-static int	ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	size_t	index;
-
-	index = 0;
-	while (src[index] && index + 1 < size)
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	if (size > 0)
-		dest[index] = '\0';
-	index = ft_strlen(src);
-	return (index);
-}
-
-char	*ft_strdup(const char *src)
-{
-	char	*copy;
-	size_t	size;
-
-	size = ft_strlen(src) + 1;
-	copy = malloc(size * sizeof(char));
-	if (copy == NULL)
-		return (NULL);
-	ft_strlcpy(copy, src, size);
-	return (copy);
-}
-
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
