@@ -6,7 +6,7 @@
 /*   By: gmoreira <gmoreira@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 04:13:44 by gmoreira          #+#    #+#             */
-/*   Updated: 2022/06/02 03:46:11 by gmoreira         ###   ########.fr       */
+/*   Updated: 2022/06/02 04:01:11 by gmoreira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*get_n_save(char *ans, int fd)
 
 char	*read_line(int fd)
 {
-	char	line[BUFFER_SIZE + 1];
+	static char	line[BUFFER_SIZE + 1];
 	char	*ans;
 	char	*temp;
 	int		ret;
